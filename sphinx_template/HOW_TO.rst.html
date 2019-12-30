@@ -1,0 +1,53 @@
+<h1 id="installation">Installation</h1>
+<ol style="list-style-type: decimal">
+<li>Install Sphinx and some of its extensions, located at <code class="sourceCode">requirements.txt</code></li>
+<li>Copy the the folders <code class="sourceCode">docs</code> and <code class="sourceCode">docsrc</code> to the root directory of your project.</li>
+</ol>
+<ul>
+<li>The <code class="sourceCode">docs</code> folder is empty and it will contain the generated and deployed documentation generated with Sphinx.</li>
+<li>The <code class="sourceCode">docsrc</code> has the following contents:
+<ul>
+<li><code class="sourceCode">Makefile</code>: this is the make file to be used to generate the documentation.</li>
+<li>source folder: put your documents here. It contains 4 files:
+<ul>
+<li><code class="sourceCode">conf.py</code> this is the configuration file for document generation.</li>
+<li><code class="sourceCode">genindex.rst</code>: do not modify this file. Just keep it as it is.</li>
+<li><code class="sourceCode">index.rst</code>: this file defines the whole structure of the documentation. Include here all those documents you want to add.</li>
+<li><code class="sourceCode">module_index.rst</code>: this file specifies</li>
+</ul></li>
+</ul></li>
+</ul>
+<h1 id="configuration">Configuration</h1>
+<ul>
+<li>Modify the <code class="sourceCode">conf.py</code> file
+<ul>
+<li><p>To set the location of the code sources folder/s:</p>
+<p><code class="sourceCode">sys.path.insert(0, os.path.abspath('../src')</code></p></li>
+<li>To add information about the project:
+<ul>
+<li>project name</li>
+<li>version</li>
+<li>release</li>
+<li>description</li>
+<li>etc.</li>
+</ul></li>
+</ul></li>
+<li>Optionally if the location of the source folders is not set in <code class="sourceCode">conf.py</code> it is possible to be set using the PYTHONPATH environment variable. <code class="sourceCode">export PYTOHPATH=../src</code></li>
+</ul>
+<h1 id="writing-the-documentation">Writing the documentation</h1>
+<p>While markdown (MD) format is supported it is recommended to write documents in RST format since there exist some bugs in the processing of MD files.</p>
+<p>Include all your documents into the docsrc/source folder. You may organize your docs within subfolders here as you need.</p>
+<ul>
+<li><p>Modify the index.rst file: this document defines the overall structure of the documentation. You can add here any section that is needed. Follow the hints contained in index.rst.</p>
+<p>The last toctree directive adds a section with automatically generated documentation from code docstrings. Do not remove it unless you really need to do it.</p></li>
+<li>Modify the module_index.rst file: this document defines which Python modules to document int the Reference section of index.rst. Simply select which modules to include and add them following the examples contained in modules_indes.rst.</li>
+</ul>
+<h1 id="generating-the-documentation">Generating the documentation</h1>
+<p>To generate documentation execute in the docsrc folder:</p>
+<pre class="sourceCode  editor-colors"><code>make clean
+make html</code></pre>
+<p>The resulting documentation is generated in the folder docsrc/build/html.</p>
+<p>To deploy the generated documentation to the docs folder:</p>
+<pre class="sourceCode  editor-colors"><code>make deploy</code></pre>
+<p>Execute make help for more options.</p>
+<pre class="sourceCode  editor-colors"><code>make help</code></pre>
