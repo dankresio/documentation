@@ -1,31 +1,31 @@
 Installation
 ------------
 
-1. Install Sphinx and some of its extensions, located at `requirements.txt`:code:
+1. Install Sphinx and some of its extensions, located at `requirements.txt`
 
-2. Copy the the folders `docs`:code: and `docsrc`:code: to the root directory of your project.
+2. Copy the the folders `docs` and `docsrc` to the root directory of your project.
 
-- The `docs`:code: folder is empty and it will contain the generated and deployed documentation generated with Sphinx.
+- The `docs` folder is empty and it will contain the generated and deployed documentation generated with Sphinx.
 
-- The `docsrc`:code: has the following contents:
+- The `docsrc` has the following contents:
 
-  - `Makefile`:code:: this is the make file to be used to generate the documentation.
+  - `Makefile`: this is the make file to be used to generate the documentation.
   - `source` folder: put your documents here. It contains 4 files:
-    - `conf.py`:code: this is the configuration file for document generation.
-    - `genindex.rst`:code:: do not modify this file. Just keep it as it is.
-    - `index.rst`:code:: this file defines the whole structure of the documentation. Include here all those documents you
+    - `conf.py` this is the configuration file for document generation.
+    - `genindex.rst`: do not modify this file. Just keep it as it is.
+    - `index.rst`: this file defines the whole structure of the documentation. Include here all those documents you
       want to add.
-    - `module_index.rst`:code:: this file specifies
+    - `module_index.rst`: this file specifies
 
 
 Configuration
 -------------
 
-- Modify the `conf.py`:code: file
+- Modify the `conf.py` file
 
   - To set the location of the code sources folder/s:
 
-    `sys.path.insert(0, os.path.abspath('../src')`:code:
+    `sys.path.insert(0, os.path.abspath('../src')`
 
   - To add information about the project:
 
@@ -35,8 +35,8 @@ Configuration
     - description
     - etc.
 
-- Optionally if the location of the source folders is not set in `conf.py`:code: it is possible to be set using the PYTHONPATH environment variable.
-  `export PYTOHPATH=../src`:code:
+- Optionally if the location of the source folders is not set in `conf.py` it is possible to be set using the PYTHONPATH environment variable.
+  `export PYTOHPATH=../src`
 
 
 Writing the documentation
