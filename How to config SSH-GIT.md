@@ -1,4 +1,4 @@
-# HOW-TO-CONFIG-SSH-GIT
+# How to configure SSH-GIT
 
 En este tutorial vamos a configurar nuestra cuenta de github para poder utilizar la autenticación vía ssh.
 
