@@ -62,8 +62,6 @@ Generating the documentation
 
 To generate documentation execute in the `docsrc` folder:
 
-.. code::
-
 	make clean
 	make html
 
@@ -71,13 +69,9 @@ The resulting documentation is generated in the folder `docsrc/build/html`.
 
 To deploy the generated documentation to the `docs` folder:
 
-.. code::
-
 	make deploy
 
 
 Execute `make help` for more options.
-
-.. code::
 
 	make help
